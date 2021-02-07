@@ -1,0 +1,5 @@
+entity: Urls
+items:
+    url1:
+        tinyUrlPart: 'tiny123'
+        fullUrl: 'https://www.raiffeisen.ru/'

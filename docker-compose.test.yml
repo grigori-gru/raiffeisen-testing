@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+    db:
+        image: postgres:13
+        restart: always
+        container_name: db_url_test
+        env_file:
+            - test.env
+        ports:
+            - 54321:5432
+    app:
+        image: node:14-alpine
+        working_dir: /usr/src/app
+        env_file:
+            - test.env
+        volumes:
+            - './:/usr/src/app:cached'
