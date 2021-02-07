@@ -20,7 +20,7 @@ export class UrlsController {
     @Post()
     @ApiResponse({
         status: 201,
-        description: 'Tiny url has been successfully created.',
+        description: 'Tiny url has been successfully created and sent',
         type: String,
     })
     async addUrl(@Body() body: CreateUrlDto, @Req() req: Request) {
